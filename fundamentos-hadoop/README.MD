@@ -1,4 +1,4 @@
-## Anotações do Curso - Fundamentos e Ecossistema Hadoop
+## Anotações do Curso - Fundamentos, Ecossistema e Arquitetura Hadoop
 
 ### Introdução ao Hadoop:
 
@@ -42,8 +42,18 @@
 10. **Oozie:**
     - Sistema de agendamento de fluxo de trabalho para definir e executar fluxos de trabalho complexos no Hadoop.
 
+### Arquitetura do Hadoop:
+
+- A arquitetura do Hadoop é baseada em um modelo mestre-escravo.
+- O nó mestre consiste em um NameNode (para HDFS) e ResourceManager (para YARN).
+- Os nós escravos consistem em DataNodes (para HDFS) e NodeManagers (para YARN).
+- O NameNode gerencia o namespace do sistema de arquivos e controla o acesso aos arquivos.
+- O ResourceManager aloca recursos para as aplicações e monitora sua execução nos nós do cluster.
+- Os DataNodes armazenam e recuperam os blocos de dados e realizam tarefas de leitura/gravação no HDFS.
+- Os NodeManagers gerenciam os recursos de computação (CPU, memória) nos nós do cluster e executam tarefas em contêineres.
+
 ### Conclusão:
 
-- O ecossistema Hadoop é composto por uma variedade de ferramentas e serviços que se complementam para oferecer uma solução abrangente para processamento, armazenamento e análise de dados em larga escala.
-- Cada componente desempenha um papel específico e é essencial para a funcionalidade global do Hadoop.
-- Compreender esses componentes é fundamental para aproveitar ao máximo o potencial do Hadoop na manipulação de grandes volumes de dados de maneira eficiente e confiável.
+- Compreender a arquitetura do Hadoop é essencial para projetar, implantar e gerenciar eficientemente clusters Hadoop.
+- A arquitetura mestre-escravo distribui as responsabilidades entre os diferentes componentes para garantir um funcionamento suave e confiável do sistema.
+- Cada componente desempenha um papel crítico na arquitetura e é fundamental para o desempenho global do cluster Hadoop.
